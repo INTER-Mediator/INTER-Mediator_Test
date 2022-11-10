@@ -1,0 +1,64 @@
+{
+  "name": "inter-mediator/inter-mediator_test",
+  "version": "2",
+  "time": "2022-04-13",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/inter-mediator/INTER-Mediator_Test.git"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.1.0",
+    "inter-mediator/inter-mediator": "dev-master"
+  },
+  "autoload": {},
+  "description": "INTER-Mediator Trial Application, also suitable for studying INTER-Mediator",
+  "type": "application",
+  "keywords": [
+    "INTER-Mediator",
+    "application",
+    "src/test"
+  ],
+  "homepage": "https://inter-mediator.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "INTER-Mediator Directive Committee",
+      "homepage": "http://inter-mediator.org/"
+    }
+  ],
+  "support": {
+    "community-jp": "https://www.facebook.com/groups/233378356708157/",
+    "community-en": "https://www.facebook.com/groups/254446237922985/",
+    "source": "https://github.com/INTER-Mediator/IMApp_SimpleBBS",
+    "manual": "http://inter-mediator.info/"
+  },
+  "scripts": {
+    "test": [
+      "The software src/test is very important activity for the quality assuarance."
+    ],
+    "clear": [
+      "rm -rf node_modules vendor"
+    ],
+    "post-update-cmd": [
+      "cd ./vendor/inter-mediator/inter-mediator; npm install",
+      "cd ./vendor/inter-mediator/inter-mediator; npm update",
+      "./vendor/inter-mediator/inter-mediator/dist-docs/generateminifyjshere.sh",
+      "./lib/doafterupdate.sh"
+    ],
+    "post-install-cmd": [
+      "cd ./vendor/inter-mediator/inter-mediator; npm install",
+      "./vendor/inter-mediator/inter-mediator/dist-docs/generateminifyjshere.sh",
+      "./lib/doafterinstall.sh"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "simplesamlphp/composer-module-installer": true,
+      "mouf/nodejs-installer": true
+    }
+  }
+}
