@@ -1,55 +1,32 @@
-const Page = require('./page');
+const IMPage = require('./impage');
 
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class SamplesPage extends Page {
+class SamplesPage extends IMPage {
   /**
    * define selectors using getter methods
    */
-  get navigator() {
-    return $('#IM_NAVIGATOR');
+  get fieldPersonId() {
+    return $('._im_test-person-id');
   }
-
-  get navigatorUpdateButton() {
-    return $('#IM_NAVIGATOR .IM_NAV_update_button');
+  get fieldPersonCategory() {
+    return $('._im_test-person-category');
   }
-
-  get navigatorInfo() {
-    return $('#IM_NAVIGATOR .IM_NAV_info');
+  get fieldPersonCheck() {
+    return $('._im_test-person-checking');
   }
-
-  get navigatorMoveButtons() {
-    return $$('#IM_NAVIGATOR .IM_NAV_move_button');
+  get fieldPersonName() {
+    return $('._im_test-person-name');
   }
-
-  get navigatorMoveButton() {
-    return $('#IM_NAVIGATOR .IM_NAV_move_button');
+  get fieldPersonMail() {
+    return $('._im_test-person-mail');
   }
-
-  get navigatorDeleteButton() {
-    return $('#IM_NAVIGATOR .IM_NAV_delete_button');
+  get fieldPersonLocations() {
+    return $$('._im_test-person-location');
   }
-
-  get navigatorInfoInsertButton() {
-    return $('#IM_NAVIGATOR .IM_NAV_insert_button');
-  }
-
-  get navigatorInfoCopy() {
-    return $('#IM_NAVIGATOR .IM_NAV_copy_button');
-  }
-
-  get navigatorNotExist() {
-    return $('#IM_NAVIGATOR .IM_NotExist');
-  }
-
-  get btnSubmit() {
-    return $('button[type="submit"]');
-  }
-
-  get title() {
-    return $('title');
-
+  get fieldPersonMemo() {
+    return $('._im_test-person-memo');
   }
 
   /**
