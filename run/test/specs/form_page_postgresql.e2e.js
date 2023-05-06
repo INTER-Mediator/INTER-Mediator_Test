@@ -1,9 +1,9 @@
-const FormPage = require('../pageobjects/form.page');
+const FormPage = require('../pageobjects/form_postgresql.page');
 
 describe('Form Page', () => {
   it('can open with the valid title', async () => {
     await FormPage.open()
-    await expect(browser).toHaveTitle('INTER-Mediator - Sample - Form Style/MySQL')
+    await expect(browser).toHaveTitle('INTER-Mediator - Sample - Form Style/PostgreSQL')
   });
   it('has the INTER-Mediator\'s navigatio.n', async () => {
     await expect(FormPage.navigator).toExist()

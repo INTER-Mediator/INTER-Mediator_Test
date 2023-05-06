@@ -8,8 +8,8 @@ module.exports = class IMPage {
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
     open (path) {
-        //return browser.url(`http://localhost:9800/vendor/inter-mediator/inter-mediator/${path}`)
-        return browser.url(`http://localhost:9800/${path}`)
+        return browser.url(`http://localhost:9081/vendor/inter-mediator/inter-mediator/${path}`)
+        //return browser.url(`http://localhost:9081/${path}`)
     }
 
     /**

@@ -37,19 +37,20 @@
     "url": "https://github.com/INTER-Mediator/INTER-Mediator.git"
   },
   "scripts": {
-    "test": "npx wdio run ./wdio.conf.js",
+    "test": "npx wdio run ./run/wdio.conf.js",
     "postinstall": "npmpd"
   },
   "devDependencies": {
-    "@wdio/cli": "^7.25.4",
-    "@wdio/local-runner": "^7.25.4",
-    "@wdio/mocha-framework": "^7.25.4",
-    "@wdio/spec-reporter": "^7.25.4",
-    "chromedriver": "^107.0.3",
+    "@wdio/cli": "^8.10.0",
+    "@wdio/local-runner": "^8.10.0",
+    "@wdio/mocha-framework": "^8.10.0",
+    "@wdio/spec-reporter": "^8.10.0",
+    "appium-safari-driver": "*",
+    "chromedriver": "112.0.5615.49",
     "geckodriver": "*",
     "ms-chromium-edge-driver": "*",
-    "appium-safari-driver": "*",
-    "wdio-chromedriver-service": "^8.0.0"
+    "wdio-chromedriver-service": "*",
+    "ts-node": "*"
   },
   "dependencies": {
     "selenium-webdriver": "*",

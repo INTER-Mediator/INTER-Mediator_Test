@@ -1,4 +1,4 @@
-const IMPage = require('./impage');
+const IMPage = require('./im.page');
 
 /**
  * sub page containing specific selectors and methods for a specific page

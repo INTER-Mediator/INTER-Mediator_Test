@@ -1,21 +1,21 @@
 version: '3.8'
 services:
   php-apache:
-    image: php-apache_im
+    image: php-apache_im_test
     build:
       context: .
       dockerfile: ./lib/docker/php-apache/Dockerfile
     platform: linux/amd64
-    container_name: php-apache_im
+    container_name: php-apache_im_test
     ports:
-      - "9080:80"
-      - "11478:11478"
+      - "9081:80"
+      - "11479:11479"
     volumes:
       - ./src:/var/www/html/src
     restart: always
     depends_on:
-      - db
-  db:
+      - db-mysql
+  db-mysql:
     image: mysql:latest
     platform: linux/amd64
     restart: always
@@ -36,7 +36,7 @@ services:
       MYSQL_PASSWORD: password
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
     ports:
-      - 127.0.0.1:13306:3306
+      - 127.0.0.1:23306:3306
   mailhog:
     image: mailhog/mailhog
     ports:
